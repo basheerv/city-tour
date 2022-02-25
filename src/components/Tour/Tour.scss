@@ -1,0 +1,65 @@
+@import '../../index.scss';
+.tour_list {
+    width: 70vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+    color: $mainBlack;
+}
+
+.tour {
+    background: $mainGrey;
+    margin: 2rem 0;
+    img {
+        width: 100%;
+        min-width: 100%;
+        display: block;
+        min-height: 13rem;
+    }
+}
+
+@media screen and(min-width: 768px) {
+    .tour {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        column-gap: 2rem;
+    }
+}
+
+.img_responsive {
+    position: relative;
+}
+
+.close_btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transition: all 0.3s linear;
+    color: $mainGreen;
+    font-size: 2rem;
+    opacity: 0;
+}
+
+.img_responsive:hover .close_btn {
+    opacity: 1;
+}
+
+.tour_info {
+    padding: 1rem 0.5rem;
+    h3 {
+        text-transform: capitalize;
+        color: $mainGreen;
+    }
+    h4 {
+        text-transform: capitalize;
+        margin: 0.2rem 0 0.6rem 0;
+    }
+    h5 {
+        text-transform: capitalize;
+        span {
+            color: $mainGreen;
+            margin: 0.2rem;
+            font-size: 1rem;
+        }
+    }
+}
